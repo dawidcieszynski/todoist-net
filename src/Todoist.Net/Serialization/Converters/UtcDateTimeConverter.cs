@@ -21,5 +21,15 @@ namespace Todoist.Net.Serialization.Converters
 
             base.WriteJson(writer, value, serializer);
         }
+
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            if (existingValue == null)
+            {
+                return null;
+            }
+
+            return base.ReadJson(reader, objectType, existingValue, serializer);
+        }
     }
 }
