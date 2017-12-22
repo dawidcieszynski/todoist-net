@@ -39,6 +39,8 @@ namespace Todoist.Net.Services
         /// <exception cref="HttpRequestException">API exception.</exception>
         Task<ProjectInfo> GetAsync(ComplexId id);
 
+        Task<ProjectData> GetDataAsync(ComplexId projectId);
+
         /// <summary>
         /// Updates the multiple orders indents asynchronous.
         /// </summary>

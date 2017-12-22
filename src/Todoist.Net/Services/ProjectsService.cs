@@ -61,5 +61,15 @@ namespace Todoist.Net.Services
                         new KeyValuePair<string, string>("project_id", id.ToString())
                     });
         }
+
+        public Task<ProjectData> GetDataAsync(ComplexId id)
+        {
+            return TodoistClient.PostAsync<ProjectData>(
+                "projects/get_data",
+                new List<KeyValuePair<string, string>>
+                {
+                    new KeyValuePair<string, string>("project_id", id.ToString())
+                });
+        }   
     }
 }
