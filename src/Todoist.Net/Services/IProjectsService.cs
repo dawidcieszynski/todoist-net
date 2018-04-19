@@ -39,6 +39,11 @@ namespace Todoist.Net.Services
         /// <exception cref="HttpRequestException">API exception.</exception>
         Task<ProjectInfo> GetAsync(ComplexId id);
 
+        /// <summary>
+        /// Gets data
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <returns></returns>
         Task<ProjectData> GetDataAsync(ComplexId projectId);
 
         /// <summary>
