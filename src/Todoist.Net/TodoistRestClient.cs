@@ -25,6 +25,7 @@ namespace Todoist.Net
 
             // ReSharper disable once ExceptionNotDocumented
             _httpClient = new HttpClient(httpClientHandler) { BaseAddress = new Uri("https://todoist.com/API/v7/") };
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
         }
 
         public void Dispose()
